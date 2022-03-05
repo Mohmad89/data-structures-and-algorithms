@@ -6,5 +6,6 @@
 | 2      | array shift  |  [link](challenge2/README.md)       |
 | 3      | Binary Search  |  [link](challenge2/README.md)       |
 | 4      |        |        |
+| 5      | LinkedList  |  [link](challenge5/README.md)       |
 
 
