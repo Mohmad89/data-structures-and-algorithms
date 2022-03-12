@@ -8,6 +8,6 @@
 | 4      |        |        |
 | 5      | LinkedList  |  [link](challenge5/README.md)       |
 | 6      | LinkedList  |  [link](challenge6/README.md)       |
-| 7      | LinkedList  |  [link](challenge7/REDME.md)       |
+| 8     | Code Challenge / Algorithm  |  [link](challenge8/README.md)       |
 
 
