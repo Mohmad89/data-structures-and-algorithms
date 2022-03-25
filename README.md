@@ -10,5 +10,6 @@
 | 8     | Code Challenge / Algorithm  |  [link](challenge8/README.md)       |
 | 10    | Stack and Queue  |  [link](challenge10/README.md)       |
 | 11    |  PseudoQueue  |  [link](challenge11/README.md)       |
+| 13    |  Brackets  |  [link](challenge13/README.md)       |
 
 
