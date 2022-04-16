@@ -12,5 +12,5 @@
 | 11    |  PseudoQueue  |  [link](challenge11/README.md)       |
 | 13    |  Brackets  |  [link](challenge13/README.md)       |
 | 15    |  Tree  |  [link](challenge15/README.md)       |
-
-
+| 16    |  Maximam Number Methid |  [link](challenge16/README.md)       |
+| 17    |  Bridth First Method  |  [link](challenge17/README.md)       |

@@ -7,6 +7,8 @@ import challenge17.data.BTNode;
 import challenge17.structure.BinaryTree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class App <T>{
@@ -19,30 +21,33 @@ public class App <T>{
         binaryTree.getRoot().setRight(new BTNode<Integer>(12));
         binaryTree.getRoot().getLeft().setLeft(new BTNode<Integer>(6));
         binaryTree.getRoot().getLeft().setRight(new BTNode<Integer>(7));
-        binaryTree.getRoot().getLeft().getLeft().setLeft(new BTNode<Integer>(9));
+        binaryTree.getRoot().getRight().setLeft(new BTNode<Integer>(9));
+        binaryTree.levelOrderTraversalLoop();
 
         ArrayList<String> arrayList = breadthFirst(binaryTree);
         System.out.println(arrayList);
     }
 
+
     public static ArrayList<String> breadthFirst (BinaryTree binaryTree) {
-        ArrayList <String> arrayList = new ArrayList();
-        if (binaryTree.getRoot() == null){
-            return arrayList;
-        }
-        Stack<BTNode> stack = new Stack<>();
-        stack.push(binaryTree.getRoot());
+        ArrayList<String> arrayList = new ArrayList<>();
+        if (binaryTree.getRoot() != null) {
+            Queue<BTNode> queue = new LinkedList<>();
+            queue.offer(binaryTree.getRoot());
 
+            while (!queue.isEmpty()) {
+                BTNode node = queue.poll();
+                arrayList.add(node.getData().toString());
+                if (node.getLeft() != null) {
+                    queue.offer(node.getLeft());
+                }
 
-        while (!stack.isEmpty()){
-            BTNode value = stack.pop();
-            arrayList.add(value.getData().toString());
-            if (value.getRight() != null){
-                stack.push(value.getRight());
+                if (node.getRight() != null) {
+                    queue.offer(node.getRight());
+                }
             }
-            if (value.getLeft() != null){
-                stack.push(value.getLeft());
-            }
+        }else {
+            return null;
         }
         return arrayList;
     }
