@@ -5,13 +5,13 @@ ___
 
 ## Whiteboard Process
 
-![Whiteboard](image/bredthFirst.png)
+![Whiteboard](image/bredthFirst1.png)
 
 ___
 
 ## Approach & Efficiency
 
-* Approach : create bredthFirst Method inside App class and then return ArrayList that contains all of the value inside tree 
+* Approach : create bredthFirst Method inside App class and then return ArrayList that contains all of the value inside tree
 * Big O notation :  
     1. Time  : O(n)  
     2. Space : O(1)  
@@ -26,8 +26,8 @@ ___
         binaryTree.getRoot().setRight(new BTNode<Integer>(12));  
         binaryTree.getRoot().getLeft().setLeft(new BTNode<Integer>(6));  
         binaryTree.getRoot().getLeft().setRight(new BTNode<Integer>(7));  
-        binaryTree.getRoot().getLeft().getLeft().setLeft(new BTNode<Integer>(9));  
+        binaryTree.getRoot().getRight().setLeft(new BTNode<Integer>(9));  
 
 * Output :  
 
-    System.out.println(bredthFirst(binaryTree).size()); // 6
+    System.out.println(bredthFirst(binaryTree)); // [1, 3, 12, 6, 7, 9]

@@ -23,7 +23,8 @@ class AppTest {
 
     @Test void treeIsEmpty() {
         BinaryTree binaryTree = new BinaryTree();
-        assertEquals(0, App.breadthFirst(binaryTree).size());
-
+        assertEquals(null, App.breadthFirst(binaryTree));
     }
+
+
 }

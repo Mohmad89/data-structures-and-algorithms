@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge10" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge10" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge11" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge11" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge13" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge13" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge15" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge15" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge16" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge16" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge17" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge17" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge2/challenge5" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge2/challenge5" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge5" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge5" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge6" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge6" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge7" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge7" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/challenge8" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../gradle-7.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/challenge8" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
