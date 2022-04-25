@@ -16,3 +16,4 @@
 | 16    |  Maximam Number Methid |  [link](challenge16/README.md)       |
 | 17    |  Bridth First Method  |  [link](challenge17/README.md)       |
 | 18    |  Fizz And Buzz  |  [link](challenge18/README.md)       |
+| 26    |  Insertion Sort  |  [link](challenge26/README.md)       |
