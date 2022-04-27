@@ -17,3 +17,4 @@
 | 17    |  Bridth First Method  |  [link](challenge17/README.md)       |
 | 18    |  Fizz And Buzz  |  [link](challenge18/README.md)       |
 | 26    |  Insertion Sort  |  [link](challenge26/README.md)       |
+| 27    |  Marge Sort  |  [link](challenge27/README.md)       |
