@@ -12,7 +12,7 @@ public class App {
         int resultArr[] = quickSort(arr, 0, arr.length-1);
 
         for (int i = 0; i < resultArr.length; i++) {
-            System.out.println(resultArr[i]);
+            System.out.print(resultArr[i]+ " ");
         }
     }
 
@@ -21,28 +21,22 @@ public class App {
         if (left < right)
         {
             int position = partition(arr, left, right);
-
             quickSort(arr, left, position - 1);
             quickSort(arr, position + 1, right);
         }
         return arr;
     }
-
     static void swap(int[] arr, int low, int j)
     {
         int temp = arr[low];
         arr[low] = arr[j];
         arr[j] = temp;
     }
-
-
     static int partition(int[] arr, int left, int right)
     {
 
         int pivot = arr[right];
-
         int low = left - 1;
-
         for(int j = left; j <= right - 1; j++)
         {
 
