@@ -10,7 +10,7 @@ ___
 
 ## Blog Article
 
-[BLOG.md](BLOG.md)
+[BLOG](BLOG.md)
 ___
 
 ## Approach & Efficiency
