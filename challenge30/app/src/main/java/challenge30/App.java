@@ -15,6 +15,6 @@ public class App {
         hashCode.set("3", "iyad");
         System.out.println(hashCode.get("3"));
         System.out.println(hashCode.contains("1"));
-//        System.out.println(hashCode.keys());
+        System.out.println(hashCode.keys());
     }
 }

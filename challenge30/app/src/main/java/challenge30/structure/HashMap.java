@@ -3,6 +3,7 @@ package challenge30.structure;
 import challenge30.data.HashNode;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HashMap <K, V>{
 
@@ -120,25 +121,20 @@ public class HashMap <K, V>{
         return false;
     }
 
-//    public ArrayList<K> keys () {
-//
-//        ArrayList<K> keys = new ArrayList<>();
-//        int index = getBucketIndex(i);
-//        HashNode <K, V> head = bucketArray.get(index);
-//        while (!isEmpty()) {
-//
-//
-//            while (head != null) {
-//                keys.add(head.getKey());
-//                head = head.getNext();
-//            }
-//
-//            head = bucketArray.get(i);
-//        }
-//        return keys;
-//
-//
-//    }
+    public ArrayList<K> keys(){
+        ArrayList<K> keys = new ArrayList<>();
+
+        for (int index = 0 ; index < bucketArray.size() ; index++)
+        {
+            HashNode<K, V> head = bucketArray.get(index);
+            while (head != null)
+            {
+                keys.add(head.getKey());
+                head = head.getNext();
+            }
+        }
+        return keys;
+    }
 
 
 }
