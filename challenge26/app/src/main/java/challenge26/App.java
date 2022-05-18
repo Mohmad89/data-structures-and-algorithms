@@ -6,7 +6,7 @@ package challenge26;
 public class App {
 
     public static void main(String[] args) {
-        int [] num = {1, 3, 2, 5, 4};
+        int [] num = {8, 4, 23, 42, 16, 15};
         int [] arr = InsertionSort(num);
         for (int i = 0; i < arr.length ; i++){
             System.out.println(arr[i]);
@@ -14,14 +14,17 @@ public class App {
     }
 
     public static int[] InsertionSort(int [] array){
-        for (int i = 1; i < array.length; i++){
-            int j = i-1;
+        for (int i = 1; i < array.length ; i++){
+            int j = i - 1;
             int temp = array[i];
+
             while (j >= 0 && temp < array[j]){
+
                 array[j + 1] = array[j];
                 j = j - 1;
             }
             array[j + 1] = temp;
+
         }
         return array;
     }
