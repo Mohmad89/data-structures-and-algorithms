@@ -13,8 +13,32 @@ public class App {
         hashCode.set("1", "emad");
         hashCode.set("2", "sara");
         hashCode.set("3", "iyad");
+        hashCode.set("4", "Mohammad");
+        hashCode.set("5", "yousef");
+        hashCode.set("6", "sara");
+        hashCode.set("7", "iyad");
+        hashCode.set("8", "Mohammad");
+        hashCode.set("9", "yousef");
+        hashCode.set("10", "sara");
+        hashCode.set("11", "iyad");
+        hashCode.set("12", "Mohammad");
+        hashCode.set("13", "yousef");
         System.out.println(hashCode.get("3"));
         System.out.println(hashCode.contains("1"));
         System.out.println(hashCode.keys());
+        System.out.println(hashCode.hash("1"));// 3
+        System.out.println(hashCode.getBuckets());
+        System.out.println(hashCode.hash("2"));
+        System.out.println(hashCode.hash("4"));
+        System.out.println(hashCode.hash("3"));
+        System.out.println(hashCode.hash("5"));
+        System.out.println(hashCode.hash("6"));
+        System.out.println(hashCode.hash("7"));
+        System.out.println(hashCode.hash("8"));
+        System.out.println(hashCode.hash("9"));
+        System.out.println(hashCode.hash("10"));
+        System.out.println(hashCode.hash("11"));
+        System.out.println(hashCode.hash("12"));
+
     }
 }

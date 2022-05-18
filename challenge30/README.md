@@ -29,4 +29,7 @@ ___
     4. get(K key)
         * this functino that accept key as a parameter then will return the value for this key if it exists.
 
+    5. hash(K key)
+        * this functino that accept key as a parameter then will return the hash  for this key if it exists.
+
 ___

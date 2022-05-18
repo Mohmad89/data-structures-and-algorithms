@@ -3,12 +3,64 @@
  */
 package challenge30;
 
+import challenge30.data.HashNode;
+import challenge30.structure.HashMap;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+class AppTest <K, V>{
+    @Test
+    void Test1() {
+        HashMap<String, String> hashCode = new HashMap<>();
+        hashCode.set("0", "Mohammad");
+        hashCode.set("1", "emad");
+        hashCode.set("2", "sara");
+        hashCode.set("3", "iyad");
+        // Test1
+        assertEquals(4, hashCode.keys().size());
+        //Test2
+        assertEquals("Mohammad", hashCode.get("0"));
+        //Test3
+        assertEquals(null, hashCode.get("5"));
+
+
     }
+
+    @Test
+    void handleCollision() {
+        HashMap<String, String> hashCode = new HashMap<>();
+        hashCode.set("0", "Mohammad");
+        hashCode.set("1", "emad");
+        hashCode.set("2", "sara");
+        hashCode.set("3", "iyad");
+        hashCode.set("4", "Mohammad");
+        hashCode.set("5", "yousef");
+        hashCode.set("6", "sara");
+        hashCode.set("7", "iyad");
+        hashCode.set("8", "Mohammad");
+        hashCode.set("9", "yousef");
+        hashCode.set("10", "sara");
+        hashCode.set("11", "iyad");
+        hashCode.set("12", "Mohammad");
+        hashCode.set("13", "yousef");
+
+        // Test 4
+        assertEquals(14, hashCode.keys().size());
+
+        //Task5
+        assertEquals(true, hashCode.hash("10") == hashCode.hash("9"));
+
+        //Task 7
+        assertEquals(7, hashCode.hash("9"));
+    }
+
+
+
+
+
+
 }

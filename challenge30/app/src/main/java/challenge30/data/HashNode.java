@@ -14,13 +14,7 @@ public class HashNode <K, V>{
         this.hashCode = hashCode;
     }
 
-    @Override
-    public int hashCode(){
-        int hash = 7;
-        hash = 31 * hash + (key == null ? 0 : key.hashCode());
-        hash = 31 * hash + (value == null ? 0 : value.hashCode());
-        return 1;
-    }
+
 
     public K getKey() {
         return key;

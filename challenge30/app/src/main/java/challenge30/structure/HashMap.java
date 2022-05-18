@@ -27,6 +27,10 @@ public class HashMap <K, V>{
         return size;
     }
 
+    public int getBuckets() {
+        return buckets;
+    }
+
     public boolean isEmpty() {
         return size == 0;
     }
@@ -41,8 +45,8 @@ public class HashMap <K, V>{
     * */
     private int getBucketIndex (K key) {
         int hashCode = hashCode(key);
-        int arrayIndex = hashCode % buckets;
 
+        int arrayIndex = hashCode % this.buckets;
         if (arrayIndex < 0){
             arrayIndex = arrayIndex * -1;
         }
@@ -56,6 +60,7 @@ public class HashMap <K, V>{
 
         int index = getBucketIndex(key);
         int hashcode = hashCode(key);
+
 
         // Create head and make it point to where the index is
         HashNode<K, V> head = bucketArray.get(index);
@@ -75,21 +80,21 @@ public class HashMap <K, V>{
             size++;
         }
 
-        if ((1.0 * size) / buckets >= 0.7) {
-            ArrayList<HashNode<K, V>> temp = bucketArray;
-            bucketArray = new ArrayList<>();
-            buckets = 2 * buckets;
-            size = 0;
-            for (int i = 0; i < buckets; i++)
-                bucketArray.add(null);
-
-            for (HashNode<K, V> headNode : temp) {
-                while (headNode != null) {
-                    set(headNode.getKey(), headNode.getValue());
-                    headNode = headNode.getNext();
-                }
-            }
-        }
+//        if ((1.0 * size) / buckets >= 0.7) {
+//            ArrayList<HashNode<K, V>> temp = bucketArray;
+//            bucketArray = new ArrayList<>();
+//            buckets = 2 * buckets;
+//            size = 0;
+//            for (int i = 0; i < buckets; i++)
+//                bucketArray.add(null);
+//
+//            for (HashNode<K, V> headNode : temp) {
+//                while (headNode != null) {
+//                    set(headNode.getKey(), headNode.getValue());
+//                    headNode = headNode.getNext();
+//                }
+//            }
+//        }
     }
 
     public V get (K key) {
@@ -121,7 +126,8 @@ public class HashMap <K, V>{
         return false;
     }
 
-    public ArrayList<K> keys(){
+
+    public List<K> keys(){
         ArrayList<K> keys = new ArrayList<>();
 
         for (int index = 0 ; index < bucketArray.size() ; index++)
@@ -135,6 +141,19 @@ public class HashMap <K, V>{
         }
         return keys;
     }
+
+
+
+    public int hash (K key){
+        List<K> keysList = keys();
+        if (keysList.contains(key)){
+            return getBucketIndex(key);
+        } else
+            return -1;
+
+    }
+
+
 
 
 }
