@@ -12,7 +12,7 @@ ___
 ## Approach & Efficiency
 
 * Big O notation for hashTable structure :
-    1. Time : O(1).
+    1. Time : O(n). -> because there's linkedlist inside evrey buckets in hashTable
     2. Space: O(n).
 
 ___
