@@ -79,6 +79,73 @@ class AppTest <K, V>{
         assertEquals("a", algorithm.repeatedWord(text));
     }
 
+    @Test
+    void leftJoinTest1() {
+        HashMap<String, String> hashMap1 = new HashMap<>();
+        HashMap<String, String> hashMap2 = new HashMap<>();
+
+        Algorithm algorithm = new Algorithm();
+
+        hashMap1.set("1", "11");
+        hashMap1.set("2", "22");
+        hashMap1.set("3", "33");
+        hashMap1.set("9", "1");
+        hashMap1.set("7", "33");
+
+        hashMap2.set("1", "1");
+        hashMap2.set("2", "4");
+        hashMap2.set("3", "9");
+        hashMap2.set("6", "1");
+        hashMap2.set("10", "1");
+
+        assertEquals("[ 2, 22, 4 ] \n" +
+                "[ 3, 33, 9 ] \n" +
+                "[ 7, 33, null ] \n" +
+                "[ 9, 1, null ] \n" +
+                "[ 1, 11, 1 ] \n", algorithm.leftJoin(hashMap1, hashMap2));
+    }
+
+    @Test
+    void leftJoinTest2() {
+        HashMap<String, String> hashMap1 = new HashMap<>();
+        HashMap<String, String> hashMap2 = new HashMap<>();
+
+        Algorithm algorithm = new Algorithm();
+
+
+        hashMap1.set("9", "1");
+        hashMap1.set("7", "33");
+
+        hashMap2.set("1", "1");
+        hashMap2.set("2", "4");
+
+
+        assertEquals("[ 7, 33, null ] \n" +
+                "[ 9, 1, null ] \n", algorithm.leftJoin(hashMap1, hashMap2));
+    }
+
+    @Test
+    void leftJoinTest3() {
+        HashMap<String, String> hashMap1 = new HashMap<>();
+        HashMap<String, String> hashMap2 = new HashMap<>();
+
+        Algorithm algorithm = new Algorithm();
+
+        hashMap1.set("1", "11");
+        hashMap1.set("2", "22");
+        hashMap1.set("3", "33");
+
+
+        hashMap2.set("1", "1");
+        hashMap2.set("2", "4");
+        hashMap2.set("3", "9");
+
+
+        assertEquals("[ 2, 22, 4 ] \n" +
+                "[ 3, 33, 9 ] \n" +
+                "[ 1, 11, 1 ] \n", algorithm.leftJoin(hashMap1, hashMap2));
+    }
+
 
 
 
