@@ -21,4 +21,5 @@
 | 27    |  Marge Sort  |  [link](challenge27/README.md)       |
 | 28    |  Quick Sort  |  [link](challenge28/README.md)       |
 | 30    | Hash Table |  [link](challenge30/README.md)       |
+| 31    | Repeated Word  |  [link](challenge30/REPEATEDWORD.md) |
 | 35    | Graph |  [link](challenge35/README.md)       |
