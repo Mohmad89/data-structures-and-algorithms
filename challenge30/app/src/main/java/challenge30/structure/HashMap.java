@@ -54,6 +54,10 @@ public class HashMap <K, V>{
         return arrayIndex;
     }
 
+    public ArrayList<HashNode<K, V>> getBucketArray() {
+        return bucketArray;
+    }
+
     public void set (K key, V value) {
         // find the index of where we should put the value
         // in the bucket array
