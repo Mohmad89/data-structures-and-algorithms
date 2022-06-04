@@ -1,9 +1,13 @@
 package challenge30;
 
+import challenge30.data.BTNode;
 import challenge30.data.HashNode;
+import challenge30.structure.BinaryTree;
 import challenge30.structure.HashMap;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class Algorithm <K, V> {
 
@@ -41,5 +45,36 @@ public class Algorithm <K, V> {
             }
         }
         return result;
+    }
+
+    public List <V> treeIntersection (BinaryTree binaryTreeOne, BinaryTree binaryTreeTwo){
+
+        BTNode rootOne = binaryTreeOne.getRoot();
+        BTNode rootTwo = binaryTreeTwo.getRoot();
+
+        HashMap hashMap = new HashMap();
+
+        List <V> nodeTreeOne = binaryTreeOne.listOfTree(binaryTreeOne);
+
+        if (rootTwo != null && rootOne != null) {
+            Queue<BTNode> queue = new LinkedList<>();
+            queue.offer(rootTwo);
+
+            while (!queue.isEmpty()) {
+                BTNode node = queue.poll();
+                if (nodeTreeOne.contains(node.getData()))
+                    hashMap.set(node.getData(), node.getData() + " value ");
+
+                if (node.getLeft() != null)
+                    queue.offer(node.getLeft());
+
+                if (node.getRight() != null)
+                    queue.offer(node.getRight());
+            }
+        }
+        if (hashMap.keys().size() > 0)
+            return  hashMap.keys();
+        else
+            return null;
     }
 }

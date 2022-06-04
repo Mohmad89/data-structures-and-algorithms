@@ -21,5 +21,8 @@
 | 27    |  Marge Sort  |  [link](challenge27/README.md)       |
 | 28    |  Quick Sort  |  [link](challenge28/README.md)       |
 | 30    | Hash Table |  [link](challenge30/README.md)       |
-| 31    | Repeated Word  |  [link](challenge30/REPEATEDWORD.md) |
+| 31    | Repeated Word Hash Table|  [link](challenge30/REPEATEDWORD.md) |
+| 32    | Tree Intersection Hash Table|  [link](challenge30/TREEINTERSECTION.md) |
+| 33    | Left Join Hash Table  |  [link](challenge30/LEFTJOIN.md) |
 | 35    | Graph |  [link](challenge35/README.md)       |
+| 36    | Bridth First Graph |  [link](challenge36/README.md)       |

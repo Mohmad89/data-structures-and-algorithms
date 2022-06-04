@@ -3,6 +3,8 @@
  */
 package challenge30;
 
+import challenge30.data.BTNode;
+import challenge30.structure.BinaryTree;
 import challenge30.structure.HashMap;
 
 public class App {
@@ -52,6 +54,38 @@ public class App {
         hashMap2.set("10", "1");
 
         System.out.println(algorithm.leftJoin(hashMap1, hashMap2));
+
+
+        // ******** Binary Tree One **************
+        BinaryTree binaryTreeOne = new BinaryTree();
+        binaryTreeOne.setRoot(new BTNode(1));
+        binaryTreeOne.getRoot().setLeft(new BTNode(2));
+        binaryTreeOne.getRoot().setRight(new BTNode(3));
+        binaryTreeOne.getRoot().getLeft().setLeft(new BTNode(4));
+        binaryTreeOne.getRoot().getLeft().setRight(new BTNode (5));
+        binaryTreeOne.getRoot().getRight().setLeft(new BTNode(6));
+        binaryTreeOne.getRoot().getRight().setRight(new BTNode(7));
+
+        System.out.println("Binary Tree One : ");
+        binaryTreeOne.levelOrderTraversalLoop();
+        System.out.println();
+
+        // ******** Binary Tree Tow **************
+        BinaryTree binaryTreeTwo = new BinaryTree();
+        binaryTreeTwo.setRoot(new BTNode(10));
+        binaryTreeTwo.getRoot().setLeft(new BTNode(2));
+        binaryTreeTwo.getRoot().setRight(new BTNode(5));
+        binaryTreeTwo.getRoot().getLeft().setLeft(new BTNode(4));
+        binaryTreeTwo.getRoot().getLeft().setRight(new BTNode (3));
+        binaryTreeTwo.getRoot().getRight().setLeft(new BTNode(8));
+        binaryTreeTwo.getRoot().getRight().setRight(new BTNode(1));
+
+        System.out.println("Binary Tree Two");
+        binaryTreeTwo.levelOrderTraversalLoop();
+        System.out.println();
+
+        System.out.println("Similar Between two Tree");
+        System.out.println(algorithm.treeIntersection(binaryTreeOne, binaryTreeTwo));
 
     }
 }
