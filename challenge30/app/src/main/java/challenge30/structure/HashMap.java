@@ -1,9 +1,12 @@
 package challenge30.structure;
 
+import challenge30.data.BTNode;
 import challenge30.data.HashNode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class HashMap <K, V>{
 
@@ -156,8 +159,6 @@ public class HashMap <K, V>{
             return -1;
 
     }
-
-
 
 
 }

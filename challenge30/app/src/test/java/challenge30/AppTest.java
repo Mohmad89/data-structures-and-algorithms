@@ -3,7 +3,9 @@
  */
 package challenge30;
 
+import challenge30.data.BTNode;
 import challenge30.data.HashNode;
+import challenge30.structure.BinaryTree;
 import challenge30.structure.HashMap;
 import org.junit.jupiter.api.Test;
 
@@ -147,6 +149,71 @@ class AppTest <K, V>{
     }
 
 
+    @Test
+    void treeIntersectionTest1 () {
+        Algorithm algorithm = new Algorithm();
+
+        BinaryTree binaryTreeOne = new BinaryTree();
+        binaryTreeOne.setRoot(new BTNode(1));
+        binaryTreeOne.getRoot().setLeft(new BTNode(2));
+        binaryTreeOne.getRoot().setRight(new BTNode(3));
+        binaryTreeOne.getRoot().getLeft().setLeft(new BTNode(4));
+        binaryTreeOne.getRoot().getLeft().setRight(new BTNode (5));
+        binaryTreeOne.getRoot().getRight().setLeft(new BTNode(6));
+        binaryTreeOne.getRoot().getRight().setRight(new BTNode(7));
+
+        BinaryTree binaryTreeTwo = new BinaryTree();
+        binaryTreeTwo.setRoot(new BTNode(10));
+        binaryTreeTwo.getRoot().setLeft(new BTNode(2));
+        binaryTreeTwo.getRoot().setRight(new BTNode(5));
+        binaryTreeTwo.getRoot().getLeft().setLeft(new BTNode(4));
+        binaryTreeTwo.getRoot().getLeft().setRight(new BTNode (3));
+        binaryTreeTwo.getRoot().getRight().setLeft(new BTNode(8));
+        binaryTreeTwo.getRoot().getRight().setRight(new BTNode(1));
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+        assertEquals (list, algorithm.treeIntersection(binaryTreeOne, binaryTreeTwo));
+    }
+
+    @Test
+    void treeIntersectionTest2() {
+        Algorithm algorithm = new Algorithm();
+
+        BinaryTree binaryTreeOne = new BinaryTree();
+        binaryTreeOne.setRoot(new BTNode(1));
+        binaryTreeOne.getRoot().setLeft(new BTNode(20));
+        binaryTreeOne.getRoot().setRight(new BTNode(3));
+
+
+        BinaryTree binaryTreeTwo = new BinaryTree();
+        binaryTreeTwo.setRoot(new BTNode(10));
+        binaryTreeTwo.getRoot().setLeft(new BTNode(2));
+        binaryTreeTwo.getRoot().setRight(new BTNode(5));
+
+
+
+        assertEquals (null, algorithm.treeIntersection(binaryTreeOne, binaryTreeTwo));
+    }
+
+    @Test
+    void treeIntersectionTest3() {
+        Algorithm algorithm = new Algorithm();
+
+        BinaryTree binaryTreeOne = new BinaryTree();
+        binaryTreeOne.setRoot(new BTNode(1));
+        binaryTreeOne.getRoot().setLeft(new BTNode(20));
+        binaryTreeOne.getRoot().setRight(new BTNode(3));
+
+        BinaryTree binaryTreeTwo = new BinaryTree();
+
+        assertEquals (null, algorithm.treeIntersection(binaryTreeOne, binaryTreeTwo));
+    }
 
 
 
