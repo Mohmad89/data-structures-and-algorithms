@@ -6,6 +6,8 @@ package challenge36;
 import challenge36.data.Vertex;
 import challenge36.structure.Graph;
 
+import java.util.stream.Collectors;
+
 public class App {
 
     public static void main(String[] args) {
@@ -24,7 +26,31 @@ public class App {
 //        System.out.println(graph.getNeighbors(new Vertex("A")));
 //        System.out.println(graph.size());
 
-//        System.out.println(graph.breadthFirst(new Vertex("A")));
+        System.out.println(graph.breadthFirst(new Vertex("A")));
         System.out.println(graph.depthFirst(new Vertex("B")));
+        System.out.println("--------------------------");
+
+        Vertex[] nodes = {
+                new Vertex("a"),
+                new Vertex("b"),
+                new Vertex("c"),
+                new Vertex("d"),
+                new Vertex("e")};
+
+        Graph graphTwo = new Graph();
+        graphTwo.addNode("a");
+        graphTwo.addNode("b");
+        graphTwo.addNode("c");
+        graphTwo.addNode("d");
+        graphTwo.addNode("e");
+
+        int[][] arr={
+                {0, 1, 0, 0, 1},
+                {1, 0, 1, 1, 0},
+                {0, 1, 0, 1, 0},
+                {0, 1, 1, 0, 1},
+                {1, 0, 0, 1, 0}};
+
+        graphTwo.adjacencyMatrixRepresentation(arr, nodes, graphTwo);
     }
 }
