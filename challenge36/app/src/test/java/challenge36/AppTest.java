@@ -62,4 +62,56 @@ class AppTest {
         assertEquals("[D, B, C, A]", graph.breadthFirst(new Vertex("D")).toString());
     }
 
+    @Test
+    void depthFirstTest1() {
+        Graph graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("F");
+
+        graph.addEdge(new Vertex("A"), new Vertex("B"));
+        graph.addEdge(new Vertex("A"), new Vertex("C"));
+        graph.addEdge(new Vertex("B"), new Vertex("D"));
+        graph.addEdge(new Vertex("D"), new Vertex("F"));
+
+        assertEquals("[B, A, C, D, F]", graph.depthFirst(new Vertex("B")).toString());
+    }
+
+    @Test
+    void depthFirstTest2() {
+        Graph graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("F");
+
+        graph.addEdge(new Vertex("A"), new Vertex("B"));
+        graph.addEdge(new Vertex("A"), new Vertex("C"));
+        graph.addEdge(new Vertex("B"), new Vertex("D"));
+        graph.addEdge(new Vertex("D"), new Vertex("F"));
+
+        assertEquals("[A, B, D, F, C]", graph.depthFirst(new Vertex("A")).toString());
+    }
+
+
+    @Test
+    void depthFirstTest3() {
+        Graph graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("F");
+
+        graph.addEdge(new Vertex("A"), new Vertex("B"));
+        graph.addEdge(new Vertex("A"), new Vertex("C"));
+        graph.addEdge(new Vertex("B"), new Vertex("D"));
+        graph.addEdge(new Vertex("D"), new Vertex("F"));
+
+        assertEquals("[C, A, B, D, F]", graph.depthFirst(new Vertex("C")).toString());
+    }
+
 }
