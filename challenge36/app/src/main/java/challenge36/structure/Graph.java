@@ -99,4 +99,20 @@ public class Graph {
             }
         }
     }
+
+    public void adjacencyMatrixRepresentation(int[][] arr, Vertex [] nodes, Graph graph) {
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+
+                if (arr[i][j] == 1) {
+                    if (!graph.getNeighbors(nodes[i]).contains(nodes[j]))
+                        graph.addEdge(nodes[i], nodes[j]);
+                }
+            }
+        }
+        for (Vertex vertex:nodes) {
+            System.out.println(vertex + "|" + graph.getNeighbors(vertex).toString());
+        }
+    }
 }
