@@ -1,7 +1,6 @@
 package challenge36.structure;
 
 import challenge36.data.Vertex;
-import com.sun.javafx.geom.Edge;
 
 import java.util.*;
 
@@ -72,5 +71,32 @@ public class Graph {
             }
         }
         return visitedNodes;
+    }
+
+    public List<Vertex> depthFirst(Vertex root){
+        List<Vertex> visited=new ArrayList<>();
+        if (root == null){
+            return null;
+        }
+        if (root!=null)
+        {
+            depthFirstVertex(root,visited);
+        }
+        return visited;
+    }
+
+    private void depthFirstVertex(Vertex root, List<Vertex> list) {
+        list.add(root);
+        if (this.getNeighbors(root)==null)
+        {
+            return;
+        }
+        for (Vertex vertex: this.getNeighbors(root))
+        {
+            if (!list.contains(vertex))
+            {
+                depthFirstVertex(vertex,list);
+            }
+        }
     }
 }

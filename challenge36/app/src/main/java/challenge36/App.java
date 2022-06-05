@@ -15,14 +15,16 @@ public class App {
         System.out.println(graph.addNode("B"));
         System.out.println(graph.addNode("C"));
         System.out.println(graph.addNode("D"));
+        System.out.println(graph.addNode("F"));
         System.out.println(graph.getNode());
         graph.addEdge(new Vertex("A"), new Vertex("B"));
         graph.addEdge(new Vertex("A"), new Vertex("C"));
         graph.addEdge(new Vertex("B"), new Vertex("D"));
-        graph.addEdge(new Vertex("D"), new Vertex("C"));
+        graph.addEdge(new Vertex("D"), new Vertex("F"));
 //        System.out.println(graph.getNeighbors(new Vertex("A")));
 //        System.out.println(graph.size());
 
-        System.out.println(graph.breadthFirst(new Vertex("A")));
+//        System.out.println(graph.breadthFirst(new Vertex("A")));
+        System.out.println(graph.depthFirst(new Vertex("B")));
     }
 }
