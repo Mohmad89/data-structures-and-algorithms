@@ -26,3 +26,6 @@
 | 33    | Left Join Hash Table  |  [link](challenge30/LEFTJOIN.md) |
 | 35    | Graph |  [link](challenge35/README.md)       |
 | 36    | Bridth First Graph |  [link](challenge36/README.md)       |
+| 38    | Depth First Graph |  [link](challenge36/DEPTHFIRST.md)       |
+| 39    | Adjacency Matrix GRaph|  [link](challenge36/adjacencyMatrixRepresentation.md)       |
+| 41    | Strings are anagrams  |  [link](challenge41/README.md)       |
