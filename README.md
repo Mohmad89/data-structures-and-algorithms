@@ -29,3 +29,4 @@
 | 38    | Depth First Graph |  [link](challenge36/DEPTHFIRST.md)       |
 | 39    | Adjacency Matrix GRaph|  [link](challenge36/adjacencyMatrixRepresentation.md)       |
 | 41    | Strings are anagrams  |  [link](challenge41/README.md)       |
+| 42    | Reverse Text  |  [link](challenge41/REVERSE-TEXT.md)       |
