@@ -67,4 +67,29 @@ public class Algorithms {
 
         return text;
     }
+
+    public int maxMultiplyThreeNumber(int [] array) {
+
+        int temp = 0, max = 0, length = array.length;
+
+        if (array.length >= 3) {
+            // First Sort The array
+            for (int index = 0; index < array.length; index++) {
+                temp = 0;
+                for (int j = index + 1; j < array.length; j++) {
+                    if (array[index] > array[j]) {
+                        temp = array[index];
+                        array[index] = array[j];
+                        array[j] = temp;
+                    }
+                }
+            }
+
+                if (array[length - 1] * array[length - 2] * array[length - 3] > array[0] * array[1] * array[length - 1])
+                    return array[length - 1] * array[length - 2] * array[length - 3];
+                else
+                    return array[0] * array[1] * array[length - 1];
+        }
+        return 0;
+    }
 }

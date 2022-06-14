@@ -30,3 +30,4 @@
 | 39    | Adjacency Matrix GRaph|  [link](challenge36/adjacencyMatrixRepresentation.md)       |
 | 41    | Strings are anagrams  |  [link](challenge41/README.md)       |
 | 42    | Reverse Text  |  [link](challenge41/REVERSE-TEXT.md)       |
+| 44    | Max Multiple Three Number  |  [link](challenge41/MaxMultiplyThreeNumber.md)       |

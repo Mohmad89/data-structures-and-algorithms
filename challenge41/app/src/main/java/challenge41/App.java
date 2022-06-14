@@ -14,6 +14,9 @@ public class App {
 
         System.out.println(algorithm.anagramString("Astronomers", "Moon starers"));
         System.out.println(algorithm.reverseText(s));
+
+        int [] array = {-4, 0, -5, -3, -1, -6, -2};
+        System.out.println(algorithm.maxMultiplyThreeNumber(array));
     }
 
 
