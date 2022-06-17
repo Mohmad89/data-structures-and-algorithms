@@ -18,13 +18,18 @@ public class Graph {
         return vertex;
     }
 
-    public void addEdge (Vertex node1, Vertex node2) {
-        if (node1.equals(node2))
+    public void addEdge (Vertex node1, Vertex node2, int weight) {
+        if (node1.equals(node2)) {
             adjVertices.get(node1).add(node2);
-        else {
+            node1.setEdges(node2, weight);
+        } else {
             adjVertices.get(node1).add(node2);
             adjVertices.get(node2).add(node1);
+            node1.setEdges(node2,weight);
+            node2.setEdges(node1,weight);
         }
+
+
     }
 
     public List<Vertex> getNode () {
@@ -99,20 +104,44 @@ public class Graph {
             }
         }
     }
+    public static Integer businessTrip(Graph graph, String[] cites) {
+        int amount = 0;
 
-    public void adjacencyMatrixRepresentation(int[][] arr, Vertex [] nodes, Graph graph) {
+        for (int index = 0; index < cites.length; index++) {
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
+            if (graph.getNeighbors(new Vertex(cites[index])).contains(new Vertex(cites[index + 1]))) {
 
-                if (arr[i][j] == 1) {
-                    if (!graph.getNeighbors(nodes[i]).contains(nodes[j]))
-                        graph.addEdge(nodes[i], nodes[j]);
+                for (Vertex node : graph.getNeighbors(new Vertex(cites[index]))) {
+
+                    if (node.equals(new Vertex(cites[index + 1]))) {
+                        amount += node.getEdges(new Vertex(cites[index]));
+                    }
                 }
             }
+            else {
+                return null;
+            }
+
+            if (index + 2 == cites.length) {
+                break;
+            }
         }
-        for (Vertex vertex:nodes) {
-            System.out.println(vertex + "|" + graph.getNeighbors(vertex).toString());
-        }
+        return amount;
     }
+//
+//    public void adjacencyMatrixRepresentation(int[][] arr, Vertex [] nodes, Graph graph) {
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//
+//                if (arr[i][j] == 1) {
+//                    if (!graph.getNeighbors(nodes[i]).contains(nodes[j]))
+//                        graph.addEdge(nodes[i], nodes[j]);
+//                }
+//            }
+//        }
+//        for (Vertex vertex:nodes) {
+//            System.out.println(vertex + "|" + graph.getNeighbors(vertex).toString());
+//        }
+//    }
 }

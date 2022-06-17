@@ -1,13 +1,17 @@
 package challenge36.data;
 
+import java.util.HashMap;
 import java.util.Objects;
 
 public class Vertex {
 
     private String data;
+    private HashMap<Vertex,Integer> edgesList;
 
     public Vertex (String data) {
         this.data = data;
+        edgesList = new HashMap<Vertex,Integer>();
+
     }
 
     public String getData() {
@@ -18,6 +22,17 @@ public class Vertex {
         this.data = data;
     }
 
+    public void setEdges(Vertex node ,int weight){
+        edgesList.put(node,weight);
+
+    }
+
+    public  int getEdges(Vertex vertex){
+        return   edgesList.get(vertex);
+
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -25,6 +40,7 @@ public class Vertex {
         Vertex vertex = (Vertex) o;
         return Objects.equals(data, vertex.data);
     }
+
 
     @Override
     public int hashCode() {

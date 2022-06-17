@@ -20,10 +20,10 @@ class AppTest {
         System.out.println(graph.addNode("C"));
         System.out.println(graph.addNode("D"));
         System.out.println(graph.getNode());
-        graph.addEdge(new Vertex("A"), new Vertex("B"));
-        graph.addEdge(new Vertex("A"), new Vertex("C"));
-        graph.addEdge(new Vertex("B"), new Vertex("D"));
-        graph.addEdge(new Vertex("D"), new Vertex("C"));
+        graph.addEdge(new Vertex("A"), new Vertex("B"), 5);
+        graph.addEdge(new Vertex("A"), new Vertex("C"), 7);
+        graph.addEdge(new Vertex("B"), new Vertex("D"), 8);
+        graph.addEdge(new Vertex("D"), new Vertex("C"), 9);
 
 
         assertEquals("[A, B, C, D]", graph.breadthFirst(new Vertex("A")).toString());
@@ -37,10 +37,10 @@ class AppTest {
         System.out.println(graph.addNode("C"));
         System.out.println(graph.addNode("D"));
         System.out.println(graph.getNode());
-        graph.addEdge(new Vertex("A"), new Vertex("B"));
-        graph.addEdge(new Vertex("A"), new Vertex("C"));
-        graph.addEdge(new Vertex("B"), new Vertex("D"));
-        graph.addEdge(new Vertex("D"), new Vertex("C"));
+        graph.addEdge(new Vertex("A"), new Vertex("B"), 1);
+        graph.addEdge(new Vertex("A"), new Vertex("C"), 1);
+        graph.addEdge(new Vertex("B"), new Vertex("D"), 1);
+        graph.addEdge(new Vertex("D"), new Vertex("C"), 1);
 
 
         assertEquals("[B, A, D, C]", graph.breadthFirst(new Vertex("B")).toString());
@@ -54,10 +54,10 @@ class AppTest {
         System.out.println(graph.addNode("C"));
         System.out.println(graph.addNode("D"));
         System.out.println(graph.getNode());
-        graph.addEdge(new Vertex("A"), new Vertex("B"));
-        graph.addEdge(new Vertex("A"), new Vertex("C"));
-        graph.addEdge(new Vertex("B"), new Vertex("D"));
-        graph.addEdge(new Vertex("D"), new Vertex("C"));
+        graph.addEdge(new Vertex("A"), new Vertex("B"), 1);
+        graph.addEdge(new Vertex("A"), new Vertex("C"), 1);
+        graph.addEdge(new Vertex("B"), new Vertex("D"), 1);
+        graph.addEdge(new Vertex("D"), new Vertex("C"), 1);
 
         assertEquals("[D, B, C, A]", graph.breadthFirst(new Vertex("D")).toString());
     }
@@ -71,10 +71,10 @@ class AppTest {
         graph.addNode("D");
         graph.addNode("F");
 
-        graph.addEdge(new Vertex("A"), new Vertex("B"));
-        graph.addEdge(new Vertex("A"), new Vertex("C"));
-        graph.addEdge(new Vertex("B"), new Vertex("D"));
-        graph.addEdge(new Vertex("D"), new Vertex("F"));
+        graph.addEdge(new Vertex("A"), new Vertex("B"), 1);
+        graph.addEdge(new Vertex("A"), new Vertex("C"), 1);
+        graph.addEdge(new Vertex("B"), new Vertex("D"), 1);
+        graph.addEdge(new Vertex("D"), new Vertex("F"), 1);
 
         assertEquals("[B, A, C, D, F]", graph.depthFirst(new Vertex("B")).toString());
     }
@@ -88,10 +88,10 @@ class AppTest {
         graph.addNode("D");
         graph.addNode("F");
 
-        graph.addEdge(new Vertex("A"), new Vertex("B"));
-        graph.addEdge(new Vertex("A"), new Vertex("C"));
-        graph.addEdge(new Vertex("B"), new Vertex("D"));
-        graph.addEdge(new Vertex("D"), new Vertex("F"));
+        graph.addEdge(new Vertex("A"), new Vertex("B"), 1);
+        graph.addEdge(new Vertex("A"), new Vertex("C"), 1);
+        graph.addEdge(new Vertex("B"), new Vertex("D"), 1);
+        graph.addEdge(new Vertex("D"), new Vertex("F"), 1);
 
         assertEquals("[A, B, D, F, C]", graph.depthFirst(new Vertex("A")).toString());
     }
@@ -106,12 +106,40 @@ class AppTest {
         graph.addNode("D");
         graph.addNode("F");
 
-        graph.addEdge(new Vertex("A"), new Vertex("B"));
-        graph.addEdge(new Vertex("A"), new Vertex("C"));
-        graph.addEdge(new Vertex("B"), new Vertex("D"));
-        graph.addEdge(new Vertex("D"), new Vertex("F"));
+        graph.addEdge(new Vertex("A"), new Vertex("B"), 1);
+        graph.addEdge(new Vertex("A"), new Vertex("C"), 1);
+        graph.addEdge(new Vertex("B"), new Vertex("D"), 1);
+        graph.addEdge(new Vertex("D"), new Vertex("F"), 1);
 
         assertEquals("[C, A, B, D, F]", graph.depthFirst(new Vertex("C")).toString());
+    }
+
+    @Test
+    void businessTripTest1() {
+        Graph graph = new Graph();
+
+        graph.addNode("Amman");
+        graph.addNode("Jara");
+        graph.addNode("Ajl");
+        graph.addNode("Aqa");
+        graph.addNode("Zar");
+        graph.addNode("Irb");
+
+        graph.addEdge(new Vertex("Amman"), new Vertex("Jara"), 150);
+        graph.addEdge(new Vertex("Amman"), new Vertex("Ajl"), 82);
+        graph.addEdge(new Vertex("Ajl"), new Vertex("Jara"), 99);
+        graph.addEdge(new Vertex("Ajl"), new Vertex("Aqa"), 42);
+        graph.addEdge(new Vertex("Jara"), new Vertex("Aqa"), 105);
+        graph.addEdge(new Vertex("Jara"), new Vertex("Zar"), 26);
+        graph.addEdge(new Vertex("Jara"), new Vertex("Irb"), 37);
+        graph.addEdge(new Vertex("Aqa"), new Vertex("Zar"), 73);
+        graph.addEdge(new Vertex("Zar"), new Vertex("Irb"), 250);
+
+        assertEquals(124, graph.businessTrip(graph, new String[]{"Amman", "Ajl", "Aqa"}));
+        assertEquals(null, graph.businessTrip(graph, new String[]{"Amman", "Aqa"}));
+        assertEquals(null, graph.businessTrip(graph, new String[]{"Amman", "Amman"}));
+        assertEquals(82, graph.businessTrip(graph, new String[]{"Amman", "Ajl"}));
+        assertEquals(0, graph.businessTrip(graph, new String[]{}));
     }
 
 }
