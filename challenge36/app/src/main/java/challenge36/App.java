@@ -13,22 +13,22 @@ public class App {
     public static void main(String[] args) {
         // Graph Instance
         Graph graph = new Graph();
-        System.out.println(graph.addNode("A"));
-        System.out.println(graph.addNode("B"));
-        System.out.println(graph.addNode("C"));
-        System.out.println(graph.addNode("D"));
-        System.out.println(graph.addNode("F"));
-        System.out.println(graph.getNode());
-        graph.addEdge(new Vertex("A"), new Vertex("B"));
-        graph.addEdge(new Vertex("A"), new Vertex("C"));
-        graph.addEdge(new Vertex("B"), new Vertex("D"));
-        graph.addEdge(new Vertex("D"), new Vertex("F"));
+//        System.out.println(graph.addNode("A"));
+//        System.out.println(graph.addNode("B"));
+//        System.out.println(graph.addNode("C"));
+//        System.out.println(graph.addNode("D"));
+//        System.out.println(graph.addNode("F"));
+//        System.out.println(graph.getNode());
+//        graph.addEdge(new Vertex("A"), new Vertex("B"), 2);
+//        graph.addEdge(new Vertex("A"), new Vertex("C"), 4);
+//        graph.addEdge(new Vertex("B"), new Vertex("D"), 5);
+//        graph.addEdge(new Vertex("D"), new Vertex("F"), 6);
 //        System.out.println(graph.getNeighbors(new Vertex("A")));
 //        System.out.println(graph.size());
 
-        System.out.println(graph.breadthFirst(new Vertex("A")));
-        System.out.println(graph.depthFirst(new Vertex("B")));
-        System.out.println("--------------------------");
+//        System.out.println(graph.breadthFirst(new Vertex("A")));
+//        System.out.println(graph.depthFirst(new Vertex("B")));
+//        System.out.println("--------------------------");
 
         Vertex[] nodes = {
                 new Vertex("a"),
@@ -51,6 +51,27 @@ public class App {
                 {0, 1, 1, 0, 1},
                 {1, 0, 0, 1, 0}};
 
-        graphTwo.adjacencyMatrixRepresentation(arr, nodes, graphTwo);
+//        graphTwo.adjacencyMatrixRepresentation(arr, nodes, graphTwo);
+        graph.addNode("Amman");
+        graph.addNode("Jara");
+        graph.addNode("Ajl");
+        graph.addNode("Aqa");
+        graph.addNode("Zar");
+        graph.addNode("Irb");
+
+        graph.addEdge(new Vertex("Amman"), new Vertex("Jara"), 150);
+        graph.addEdge(new Vertex("Amman"), new Vertex("Ajl"), 82);
+        graph.addEdge(new Vertex("Ajl"), new Vertex("Jara"), 99);
+        graph.addEdge(new Vertex("Ajl"), new Vertex("Aqa"), 42);
+        graph.addEdge(new Vertex("Jara"), new Vertex("Aqa"), 105);
+        graph.addEdge(new Vertex("Jara"), new Vertex("Zar"), 26);
+        graph.addEdge(new Vertex("Jara"), new Vertex("Irb"), 37);
+        graph.addEdge(new Vertex("Aqa"), new Vertex("Zar"), 73);
+        graph.addEdge(new Vertex("Zar"), new Vertex("Irb"), 250);
+
+
+        System.out.println(graph.businessTrip(graph, new String[]{"Amman", "Ajl", "Aqa"}));
+
+
     }
 }
